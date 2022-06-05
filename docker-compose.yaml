@@ -1,0 +1,21 @@
+version: "3.9"
+services: #collection of microservices all to be run off docker-compose command
+    backend:
+        image: docker.io/library/spring-boot-angular:1.0 # image of the backend
+        container_name: docker.io/library/spring-boot-angular:1.0 #container of the backend
+        build:
+            context: ./src/main/java/com/baeldung #specify location of the dockerfile / base working directory of the backend app
+        ports:
+            - "9090:80" #access port (localhost:8080)
+    frontend:
+        image: angular #image of the frontend
+        container_name: angular #container of the frontend
+        build:
+            context: ././src/main/js/application #specify location of the dockerfile / base working directory of the frontend app
+        ports:
+            - "4200:80" #access port (localhost:4200)
+        depends_on:
+            - backend #this will tell docker than the frontend relies on the backend. (if int he backend it might say database - another container)
+
+
+
