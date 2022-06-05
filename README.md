@@ -63,7 +63,7 @@ I then re-cloned the repo to try and just run it locally. I received the same er
 
 `npm install` still wasn't working in the folder `\spring-boot-projects\spring-boot-modules\spring-boot-angular\src\main\js\application` verifed correct according to the other project I created but was working else where on my computer.`npm install` would install in every other folder bar the  `..\application` but when ng serve or build was run inside said folder it still came up with the agruement error. From the other project my conclusions on this were either I was running it in the wrong directory or the versions of tools installed on my computer did not match those in which created the application adn that caused issues.
 
-I went back to my test app and successfully build the test project into a docker container, and if you wish to you can view it in [this repo]([https://github.com/hannahnairn/AngularDocker]).
+I went back to my test app and successfully build the test project into a docker container, and if you wish to you can view it in [this repo](https://github.com/hannahnairn/AngularDocker).
 
 ## Spring Boot API Implementation
 When attempting to create the image off the Dockerfile the error messages I was getting was that the `pom.xml` through looking at other projects their dockerfile and pom.xml were in the same location so I moved the pom.xml file to the dockerfile location and vica versa, and recieved the same error for both.
